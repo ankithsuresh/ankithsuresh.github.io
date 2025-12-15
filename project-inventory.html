@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Inventory Forecasting &amp; Management</title>
+  <meta name="description" content="Demand-forecasting and inventory-planning system for a large retail enterprise, with SKU-level forecasts, stockout alerts, and interactive dashboards.">
+  <meta name="keywords" content="inventory forecasting, demand planning, time series, machine learning, dashboard, retail analytics">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Scoped article styles -->
+  <style>
+    .case-article{max-width:860px;margin-inline:auto;line-height:1.65}
+    .case-article h1,.case-article h2{margin-top:1.6rem;margin-bottom:.6rem}
+    .case-article p{margin:.5rem 0 1rem}
+    .case-article ul{margin:.25rem 0 1.2rem}
+    .case-article hr{border-color:rgba(255,255,255,.12);margin:1.2rem 0}
+
+    .case-figure{margin:1.25rem 0 1.6rem}
+    .case-figure img{width:100%;border-radius:12px;box-shadow:0 12px 36px rgba(0,0,0,.35)}
+
+    .figure-center{max-width:620px;margin:1rem auto 1.4rem;text-align:center;}
+    .figure-center img{width:100%;height:auto;border-radius:12px;box-shadow:0 12px 36px rgba(0,0,0,.35);}
+    .figure-narrow{max-width:620px;margin-left:auto;margin-right:auto;}
+
+    .case-figure figcaption{font-size:.9rem;color:rgba(255,255,255,.78);margin-top:.55rem;text-align:center;}
+    .case-figure figcaption strong{color:rgba(255,255,255,.92)}
+
+    .lede{font-size:1.06rem;opacity:.92;margin-top:.25rem}
+
+    .meta-plain{margin:.2rem 0 .9rem;padding:0}
+    .meta-plain .meta-row{display:flex;align-items:baseline;gap:.45rem;padding:.05rem 0}
+    .meta-plain dt{margin:0;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.78)}
+    .meta-plain dt::after{content:":";margin-left:.35rem;opacity:.55}
+    .meta-plain dd{margin:0;color:rgba(255,255,255,.92);flex:1 1 auto}
+
+    .tight li{margin:.25rem 0}
+
+    body.portfolio-details-page .page-title{padding:28px 0 14px}
+    body.portfolio-details-page .page-title + .section{padding-top:16px}
+    .case-article h1:first-of-type{margin-top:.2rem}
+    .case-single-h1 .page-title h1{display:none}
+  </style>
+</head>
+
+<body class="portfolio-details-page case-single-h1">
+  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projects</a></li>
+          <li><a href="index.html#publications"><i class="bi bi-journal-richtext navicon"></i> Publications</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links text-center">
+        <a href="https://github.com/ankithsuresh" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/ankithsuresh" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:ankithsuresh.15@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Inventory Forecasting &amp; Management</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Projects</a></li>
+            <li class="current">Inventory Management Dashboard</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Article -->
+    <section class="section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <article class="case-article">
+
+          <h1>Inventory Management Dashboard</h1>
+          <dl class="meta-plain" aria-label="Project meta">
+            <div class="meta-row">
+              <dt>My Role</dt>
+              <dd>Exploratory Data Analysis · Forecast Model Development · Dashboard Design</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Tech Used</dt>
+              <dd>Python · SQL · Scikit-learn · FastAPI · Pandas · Matplotlib</dd>
+            </div>
+          </dl>
+
+          <!-- Overview -->
+          <h2 id="overview">Overview</h2>
+          <p class="lede">
+            A demand-forecasting and inventory-planning system built for a large retail enterprise managing hundreds of SKUs.
+            The tool improves visibility into sales patterns, forecasts inventory needs, and surfaces stockout risks early.
+            The dashboard equips planners with clear, actionable insights rather than scattered spreadsheets.
+          </p>
+
+          <p><strong>Key objectives included:</strong></p>
+          <ul class="tight">
+            <li>Predicting baseline and seasonal sales more accurately.</li>
+            <li>Flagging potential stockouts ahead of time.</li>
+            <li>Recommending optimal reorder timing.</li>
+            <li>Presenting SKU-level insights through an interactive, intuitive interface.</li>
+          </ul>
+
+          <!-- Dashboard image -->
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/inv-interface.png"
+                 alt="Inventory dashboard interface with SKU-level forecasts and stockout alerts.">
+            <figcaption>Dashboard preview showing SKU-level forecasts and stockout alerts.</figcaption>
+          </figure>
+
+          <!-- Key Features -->
+          <h2 id="features">Key Features</h2>
+
+          <p><strong>Exploratory Analysis</strong></p>
+          <ul class="tight">
+            <li>Identified seasonal peaks and demand cycles across product families.</li>
+            <li>Analyzed correlation structures to group highly similar SKUs.</li>
+            <li>Designed exception logic for new launches, replacements, and zero-sales periods.</li>
+          </ul>
+
+          <p><strong>Predictive Modeling</strong></p>
+          <ul class="tight">
+            <li>Built time-series models with custom lookback windows for baseline forecasts.</li>
+            <li>Applied multiplicative seasonality indices to capture monthly demand variation.</li>
+            <li>Segmented SKUs into continuous, inactive, and sparse groups, each with tailored forecasting logic to avoid overfitting.</li>
+          </ul>
+
+          <p><strong>Dashboard &amp; API Layer</strong></p>
+
+          <ul class="tight">
+            <li>Inventory & Alerts: SKU table with stock levels, metadata, and rule-based stockout alerts.</li>
+            <li>Forecasting & Planning: Historical vs. predicted sales with component/size-level breakdowns and reorder timing recommendations.</li>
+            <li>APIs & Integration: FastAPI endpoints for forecast and SKU metadata, returning JSON formatted for clean UI rendering.</li>
+          </ul>
+
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/seasonality.jpg"
+                 alt="Seasonality index by month across key SKUs.">
+            <figcaption>Seasonality trends by month across sample SKUs.</figcaption>
+          </figure>
+
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/correlation.png"
+                 alt="Product correlation heatmap and paired demand histories.">
+            <figcaption>Example of product correlation and clustering analysis.</figcaption>
+          </figure>
+
+        </article>
+      </div>
+    </section>
+    <!-- End Article -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ankith Suresh Odiyil</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Inspired by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
