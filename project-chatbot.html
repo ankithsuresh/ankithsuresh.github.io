@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Data Analytics Assistant</title>
+  <meta name="description" content="Conversational analytics for private company data—natural-language queries, structured answers with tables/charts, fast and cost-efficient orchestration.">
+  <meta name="keywords" content="LLM, conversational analytics, financials, firmographics, Elasticsearch, FastAPI, Python">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Scoped article styles -->
+  <style>
+    .case-article{max-width:860px;margin-inline:auto;line-height:1.65}
+    .case-article h1,.case-article h2{margin-top:1.6rem;margin-bottom:.6rem}
+    .case-article p{margin:.5rem 0 1rem}
+    .case-article ul{margin:.25rem 0 1.2rem}
+    .case-article hr{border-color:rgba(255,255,255,.12);margin:1.2rem 0}
+
+    /* .case-figure{margin:1.25rem 0 1.6rem}
+    .case-figure img{width:100%;border-radius:12px;box-shadow:0 12px 36px rgba(0,0,0,.35)} */
+ 
+    .figure-center{max-width: 620px;margin: 1rem auto 1.4rem;text-align: center;}
+    .figure-center img{width: 100%;height: auto;border-radius: 12px;box-shadow: 0 12px 36px rgba(0,0,0,.35);}
+    .figure-narrow{max-width: 620px;margin-left: auto;margin-right: auto;}
+
+    .case-figure figcaption{font-size:.9rem;color:rgba(255,255,255,.78);margin-top:.55rem;text-align:center;}
+    .case-figure figcaption strong{color:rgba(255,255,255,.92)}
+
+    /* Narrow figure variant for smaller, centered images */
+    .case-figure--narrow img{max-width:72%;display:block;margin-inline:auto}
+
+    .case-kicker{font-style:italic;color:rgba(255,255,255,.85);margin-top:.25rem}
+    .lede{font-size:1.06rem;opacity:.92;margin-top:.25rem}
+
+    .meta-plain{margin:.2rem 0 .9rem;padding:0}
+    .meta-plain .meta-row{display:flex;align-items:baseline;gap:.45rem;padding:.05rem 0}
+    .meta-plain dt{margin:0;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.78)}
+    .meta-plain dt::after{content:":";margin-left:.35rem;opacity:.55}
+    .meta-plain dd{margin:0;color:rgba(255,255,255,.92);flex:1 1 auto}
+
+    .tight li{margin:.25rem 0}
+
+    body.portfolio-details-page .page-title{padding:28px 0 14px}
+    body.portfolio-details-page .page-title + .section{padding-top:16px}
+    .case-article h1:first-of-type{margin-top:.2rem}
+    .case-single-h1 .page-title h1{display:none}
+  </style>
+</head>
+
+<body class="portfolio-details-page case-single-h1">
+  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projects</a></li>
+          <li><a href="index.html#publications"><i class="bi bi-journal-richtext navicon"></i> Publications</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links text-center">
+        <a href="https://github.com/ankithsuresh" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/ankithsuresh" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:ankithsuresh.15@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Data Analytics Assistant</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Projects</a></li>
+            <li class="current">Data Analytics Assistant</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <article class="case-article">
+
+          <h1>Data Analytics Assistant</h1>
+          <dl class="meta-plain" aria-label="Project meta">
+            <div class="meta-row">
+              <dt>My Role</dt>
+              <dd>LLM Architecture Development · Prompt Design  · Cost/latency Optimization</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Tech Used</dt>
+              <dd>Python · FastAPI · Elasticsearch · AWS · OpenAI</dd>
+            </div>
+          </dl>
+
+          <!-- Overview -->
+          <h2 id="overview">Overview</h2>
+          <p class="lede">
+            This conversational data analytics assistant app lets users query and analyze a large corpus of U.S. company data (financials + firmographics) in natural language. 
+            The assistant understands both company-specific lookups and exploratory, filter-driven lists, then returns structured answers with tables/charts and short, human-readable insights. 
+            The system emphasizes clarity, speed, and low cost while keeping responses consistent enough for a production UI.
+          </p>
+
+          <!-- Dashboard image (narrow, right after Overview) -->
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/chatbot.png" alt="Assistant dashboard with structured tables and concise insights">
+            <figcaption>Snapshots of the chat interface showing examples of copmany specifc and generic queries.</figcaption>
+          </figure>
+
+          <!-- Key Features -->
+          <h2 id="approach">Key Features</h2>
+
+          <p><strong>Two query modes</strong></p>
+          <ul class="tight">
+            <li><strong>Specific Queries:</strong> Direct lookups for a known company or set of companies (e.g., revenue history, industry, HQ).</li>
+            <li><strong>General Queries:</strong> Exploratory lists/aggregations across filters such as industry, location, founding year, revenue, EBITDA, and growth.</li>
+          </ul>
+
+          <p><strong>Natural-language understanding with disambiguation</strong></p>
+          <ul class="tight">
+            <li>Cleans and clarifies user questions to remove ambiguity.</li>
+            <li>Resolves entities (company names/IDs), dates, locations, and industries.</li>
+            <li>Normalizes industries to standard taxonomies (e.g., NAICS) for consistent results.</li>
+          </ul>
+
+          <p><strong>Intent detection &amp; query planning</strong></p>
+          <ul class="tight">
+            <li>Classifies the user’s request (overview, financials, lists/aggregates, etc.) and maps it to relevant field sets.</li>
+            <li>Produces a retrieval plan that safely queries the search index and prepares the expected answer shape—without exposing prompt templates or DSL specifics.</li>
+          </ul>
+
+          <p><strong>Retrieval + transformation → structured answers</strong></p>
+          <ul class="tight">
+            <li>Converts retrieved data into UI-ready JSON for tables/charts and a concise narrative summary.</li>
+            <li>Keeps output predictable for the frontend while allowing customized, context-aware variants.</li>
+          </ul>
+
+          <p><strong>Performance &amp; cost controls</strong></p>
+          <ul class="tight">
+            <li>Template-backed responses and selective caching reduce LLM calls for recurring patterns.</li>
+            <li>Practical guardrails keep processing within budget/context limits; larger queries condense gracefully.</li>
+          </ul>
+
+          <p><strong>Insight generation</strong></p>
+          <ul class="tight">
+            <li>Adds short, plain-language takeaways aligned to the returned visualization.</li>
+            <li>Handles “no data” cases cleanly with helpful messaging.</li>
+          </ul>
+
+          <!-- Block diagram image AFTER the features
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/company_arch.png" alt="Sanitized high-level architecture: intent → retrieval plan → search index → LLM summary → UI JSON">
+            <figcaption>Architecture. High-level flow from intent &amp; planning to retrieval, summarization, and structured UI output.</figcaption>
+          </figure> -->
+
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ankith Suresh Odiyil</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Inspired by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

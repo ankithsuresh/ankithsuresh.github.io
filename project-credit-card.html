@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Credit Card Default Prediction</title>
+
+  <meta name="description" content="Behavioral machine learning model that predicts credit card default using engineered repayment and utilization features on the UCI Default of Credit Card Clients dataset.">
+  <meta name="keywords" content="credit risk, credit card default, machine learning, feature engineering, R, data science portfolio">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Scoped article styles for this page -->
+  <style>
+    .case-article{max-width:860px;margin-inline:auto;line-height:1.7}
+    .case-article h1,.case-article h2{margin-top:1.4rem;margin-bottom:.6rem;text-align:left}
+    .case-article h1:first-of-type{margin-top:.2rem}
+    .case-article p{margin:.4rem 0 .9rem}
+    .case-article ul{margin:.3rem 0 1.1rem 1rem}
+    .case-article li{margin:.25rem 0}
+    .case-article hr{border-color:rgba(255,255,255,.12);margin:1.2rem 0}
+
+    .lede{font-size:1.06rem;opacity:.92;margin-top:.25rem}
+
+    .meta-plain{margin:.2rem 0 .9rem;padding:0}
+    .meta-plain .meta-row{display:flex;align-items:baseline;gap:.45rem;padding:.05rem 0}
+    .meta-plain dt{margin:0;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.78)}
+    .meta-plain dt::after{content:":";margin-left:.35rem;opacity:.55}
+    .meta-plain dd{margin:0;color:rgba(255,255,255,.92);flex:1 1 auto}
+
+    .tight li{margin:.25rem 0}
+
+    .case-figure{margin:1.25rem 0 1.6rem}
+    .figure-center{max-width:680px;margin:1rem auto 1.4rem;text-align:center;}
+    .figure-center img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.35);}
+    .figure-narrow{max-width:680px;margin-left:auto;margin-right:auto;}
+    .case-figure figcaption{font-size:.9rem;color:rgba(255,255,255,.78);margin-top:.55rem;text-align:center;}
+    .case-figure figcaption strong{color:rgba(255,255,255,.92)}
+
+    /* Concept bubbles */
+    .tag-row{margin-top:.4rem;margin-bottom:1.0rem}
+    .tag{
+      display:inline-block;
+      background:#222;
+      color:#fff;
+      padding:6px 14px;
+      border-radius:20px;
+      font-size:.85rem;
+      margin-right:6px;
+      border:1px solid #fff;
+    }
+
+    .github-link{display:inline-block;margin-top:.6rem;font-weight:600}
+
+    /* Subsection headings inside Approach */
+    .subheading{
+      font-weight:700;
+      margin-top:1.2rem;
+      margin-bottom:.4rem;
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page case-single-h1">
+  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+          <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Projects</a></li>
+          <li><a href="index.html#publications"><i class="bi bi-journal-richtext navicon"></i> Publications</a></li>
+          <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links text-center">
+        <a href="https://github.com/ankithsuresh" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/ankithsuresh" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:ankithsuresh.15@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+<!-- Page Title -->
+<div class="page-title dark-background">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#portfolio">Projects</a></li>
+        <li class="current">Credit Card Default Prediction</li>
+      </ol>
+    </nav>
+    <div></div>
+
+  </div>
+</div>
+<!-- End Page Title -->
+
+
+    <!-- Article -->
+    <section class="section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <article class="case-article">
+
+          <h1>Credit Card Default Prediction</h1>
+
+          <dl class="meta-plain" aria-label="Project meta">
+            <div class="meta-row">
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/ankithsuresh/credit-card-default-prediction" target="_blank" rel="noopener">View repository</a></dd>
+            </div>
+            <div class="meta-row">
+              <dt>Concepts</dt>
+              <dd>R programming · Data exploration · Feature engineering · Statistical modelling · Machine learning</dd>
+            </div>
+          </dl>
+
+          <!-- Overview -->
+          <h2 id="overview">Project Overview</h2>
+          <p class="lede">
+            Using the UCI Default of Credit Card Clients dataset, I built models that predict whether a customer will default next month.
+            Instead of relying on demographic attributes, I focused on behavioural patterns that indicate financial stress.
+          </p>
+
+          <!-- <div class="tag-row">
+            <span class="tag">R Programming</span>
+            <span class="tag">Feature Engineering</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Credit Risk</span>
+            <span class="tag">Statistical Modelling</span>
+          </div> -->
+
+          <!-- EDA figure -->
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/exploratorydatacc.png"
+                 alt="EDA plots showing default vs no default distribution and repayment status distributions by month.">
+            <figcaption>
+              Early exploratory analysis showing the default distribution and repayment delay patterns across months.
+            </figcaption>
+          </figure>
+
+          <!-- Approach -->
+          <h2 id="approach">Approach</h2>
+
+          <p class="subheading">1. Behavioral features instead of demographics</p>
+          <p>
+            Credit risk should be guided by how customers manage their accounts. I excluded demographic variables and used only financial behaviour such as bills, payments, credit limits, and repayment history.
+          </p>
+
+          <p class="subheading">2. Engineered features that measure financial stress</p>
+          <p>
+            Monthly bill and payment columns are noisy and highly correlated, so I built a small set of summary features that better reflect repayment behaviour:
+          </p>
+
+          <ul class="tight">
+            <li><strong>Times Delayed</strong>: Number of months in the last six where the account was late. This captures how often the customer falls behind.</li>
+            <li><strong>Average and Maximum Delay</strong>: Average lateness across six months and the single worst delay. Together they show both typical behaviour and the most severe incident.</li>
+            <li><strong>Pay Trend</strong>: Difference between the most recent delay code (PAY_1) and an older one (PAY_6). Positive values mean repayments are getting worse over time, negative values mean they are improving.</li>
+            <li><strong>Utilization and Payment Ratios</strong>: Current bill relative to credit limit, payment relative to bill, and average bill and payment amounts. These features summarise how heavily the card is used and how much of the balance is usually repaid.</li>
+          </ul>
+
+          <p>
+            These engineered signals make it easier for models to capture patterns that raw columns may hide.
+          </p>
+
+          <p class="subheading">3. Models tuned for imbalanced data</p>
+          <p>
+            Since most customers do not default, I oversampled defaulters in the training set.
+            I evaluated logistic regression, Random Forest, SVM, and KNN using accuracy, precision, sensitivity, F1 score, and AUC on a held-out test set.
+          </p>
+
+          <!-- Results -->
+          <h2 id="results">Key Results</h2>
+
+          <figure class="case-figure figure-center figure-narrow">
+            <img src="assets/img/portfolio/modelresultscc.png"
+                 alt="Table comparing model performance across accuracy, sensitivity, precision, F1 and AUC.">
+            <figcaption>
+              Model performance comparison across accuracy, F1 score, sensitivity, precision, and AUC.
+            </figcaption>
+          </figure>
+
+          <p>
+            Random Forest provided the strongest balance of performance, improving sensitivity on defaulters from the mid thirties to above fifty percent while keeping AUC near 0.77.
+          </p>
+          <p>
+            This matters because identifying high-risk accounts early is more valuable than maximising overall accuracy.
+            The results also show that good predictive performance is possible using behavioural data alone, which aligns better with responsible lending practices.
+          </p>
+
+        </article>
+      </div>
+    </section>
+    <!-- End Article -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ankith Suresh Odiyil</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Inspired by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
